@@ -1,59 +1,85 @@
-# FrontendTarefas
+# Gerenciador de Tarefas - Front-end
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.8.
+Interface web desenvolvida em **Angular** para gerenciamento de tarefas, consumindo uma API REST. Projeto desenvolvido como parte do desafio técnico de bootcamp.
 
-## Development server
+## Tecnologias utilizadas
 
-To start a local development server, run:
+- **Angular** (Standalone Components)
+- **TypeScript**
+- **HTML5 / CSS3**
+- **HttpClient** (comunicação com API)
+- **Reactive Forms / ngModel**
 
-```bash
+## Funcionalidades
+
+- ✅ Listar todas as tarefas cadastradas
+- ✅ Adicionar nova tarefa
+- ✅ Excluir tarefa existente
+- ✅ Interface responsiva e amigável
+
+## Estrutura do Projeto
+frontend-tarefas/
+├── src/
+│ ├── app/
+│ │ ├── components/
+│ │ │ └── lista-tarefas/ # Componente principal
+│ │ ├── services/
+│ │ │ └── tarefa.service.ts # Serviço de comunicação com API
+│ │ ├── models/
+│ │ │ └── tarefa.model.ts # Interface Tarefa
+│ │ ├── app.config.ts # Configuração (HttpClient)
+│ │ ├── app.ts # Componente raiz
+│ │ └── app.html # Template principal
+│ ├── assets/
+│ └── index.html
+├── angular.json
+├── package.json
+└── README.md
+
+
+## Como executar o projeto
+
+### Pré-requisitos
+
+- [Node.js](https://nodejs.org) (versão 18 ou superior)
+- [Angular CLI](https://angular.io/cli)
+- Back-end rodando (API: http://localhost:5158)
+
+### Instalação do Angular CLI
+npm install -g @angular/cli
+
+# Clone o repositório
+git clone https://github.com/malok2607/tarefas-frontend.git
+
+# Entre na pasta do projeto
+cd tarefas-frontend
+
+# Instale as dependências
+npm install
+
+# Execute o projeto
 ng serve
-```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Acesse: http://localhost:4200
 
-## Code scaffolding
+O front-end consome a API REST disponível em:
+http://localhost:5158/api/Tarefas
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+Certifique-se de que o back-end esteja rodando antes de usar o front-end.
+Repositório do back-end: https://github.com/malok2607/tarefas-api
 
-```bash
-ng generate component component-name
-```
+Como usar
+Adicionar tarefa: Preencha os campos (Título, Descrição, Status) e clique em "+ Adicionar"
+Excluir tarefa: Clique no botão "Excluir" ao lado da tarefa desejada
+Visualizar tarefas: As tarefas são carregadas automaticamente ao iniciar a aplicação
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+A interface é simples e intuitiva, com campos para:
 
-```bash
-ng generate --help
-```
+Título da tarefa
+Descrição detalhada
+Status (Pendente / Concluída)
 
-## Building
+##Autor
 
-To build the project run:
-
-```bash
-ng build
-```
-
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Fernando Rangel de Albuquerque Neto
+GitHub: @malok2607
